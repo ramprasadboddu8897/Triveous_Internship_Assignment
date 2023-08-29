@@ -6,6 +6,10 @@ const productSchema = new mongoose.Schema({
   description: { type: String, required: true },
   availability: { type: Boolean, required: true },
   categoryId: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' }, // Reference to the Category model
+  imageurls: [
+    {type: String},
+  ],
+  approved: {type: Boolean, default: false},
 });
 
 export default mongoose.model("Product", productSchema);

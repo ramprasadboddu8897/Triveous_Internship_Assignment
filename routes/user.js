@@ -2,7 +2,7 @@ import express from "express";
 const router = express.Router();
 
 import { signin, signup, addToCart, getCart, removeFromCart} from "../controllers/user.js";
-import {placeOrder, getOrderHistory, getOrderDetails} from "../controllers/order.js"
+import {placeOrder, getOrderHistory, getOrderDetails} from "../controllers/order.js";
 import auth from "../middleware/auth.js";
 
 router.post("/signin", signin);

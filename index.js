@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv'
 import cors from 'cors';
 import userRouter from "./routes/user.js";
+import adminRouter from "./routes/admin.js"
 import productRouter from "./routes/product.js";
 import categoriesRouter from './routes/category.js';
 
@@ -19,6 +20,8 @@ app.use(bodyParser.urlencoded({limit:"30mb",extended:true}));
 app.use(cors());
 
 app.use('/user', userRouter);
+app.use('/admin',adminRouter);
+
 app.use('/category', productRouter);
 app.use('/categories', categoriesRouter);
 
